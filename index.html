@@ -3,91 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marvel Movies in Hindi</title>
+  <title>Marvel Hindi Movies</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #121212; color: #eee; margin: 0; padding: 20px; }
-    header { text-align: center; padding: 20px; background: #e23636; color: white; }
-    h1 { margin: 0; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { padding: 12px; border: 1px solid #444; }
-    th { background: #e23636; }
-    a { color: #f39c12; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer { margin-top: 40px; text-align: center; font-size: 14px; color: #777; }
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    header {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 5px #000000a0;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #d1f7d1;
+    }
+
+    main {
+      width: 100%;
+      max-width: 600px;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    ul.movie-list {
+      list-style: none;
+    }
+
+    ul.movie-list li {
+      background: #27ae60;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    ul.movie-list li:hover {
+      background: #2ecc71;
+    }
+
+    ul.movie-list li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: block;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      color: #c7f0c7;
+      text-align: center;
+      user-select: none;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 10px;
+      }
+
+      main {
+        padding: 15px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>मार्वल हिंदी मूवीज़</h1>
+    <p>आपकी पसंदीदा हिंदी में मार्वल फिल्में यहाँ देखें</p>
+  </header>
 
-<header>
-  <h1>Marvel Movies & Series in Hindi</h1>
-  <p>Marvel movies ke Hindi dubbed versions ki list aur official streaming links</p>
-</header>
+  <main>
+    <ul class="movie-list">
+      <li><a href="#">आयरन मैन (Hindi)</a></li>
+      <li><a href="#">अवेन्जर्स (Hindi)</a></li>
+      <li><a href="#">स्पाइडर-मैन (Hindi)</a></li>
+      <li><a href="#">कैप्टन अमेरिका (Hindi)</a></li>
+      <li><a href="#">थॉर (Hindi)</a></li>
+    </ul>
+  </main>
 
-<main>
-  <section>
-    <h2>Marvel Movies</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Movie Name</th>
-          <th>Hindi Dubbed</th>
-          <th>Watch Online</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Iron Man</td>
-          <td>Yes</td>
-          <td><a href="https://www.hotstar.com/in/movies/iron-man/1000108640" target="_blank" rel="noopener noreferrer">Disney+ Hotstar</a></td>
-        </tr>
-        <tr>
-          <td>Thor</td>
-          <td>Yes</td>
-          <td><a href="https://www.hotstar.com/in/movies/thor/1000108581" target="_blank" rel="noopener noreferrer">Disney+ Hotstar</a></td>
-        </tr>
-        <tr>
-          <td>Captain America: The First Avenger</td>
-          <td>Yes</td>
-          <td><a href="https://www.hotstar.com/in/movies/captain-america-the-first-avenger/1000108572" target="_blank" rel="noopener noreferrer">Disney+ Hotstar</a></td>
-        </tr>
-        <tr>
-          <td>Avengers: Endgame</td>
-          <td>Yes</td>
-          <td><a href="https://www.hotstar.com/in/movies/avengers-endgame/1260010124" target="_blank" rel="noopener noreferrer">Disney+ Hotstar</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Marvel Series</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Series Name</th>
-          <th>Hindi Dubbed</th>
-          <th>Watch Online</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>WandaVision</td>
-          <td>Yes</td>
-          <td><a href="https://www.hotstar.com/in/tv/wandavision/1260037576" target="_blank" rel="noopener noreferrer">Disney+ Hotstar</a></td>
-        </tr>
-        <tr>
-          <td>Loki</td>
-          <td>Yes</td>
-          <td><a href="https://www.hotstar.com/in/tv/loki/1260041195" target="_blank" rel="noopener noreferrer">Disney+ Hotstar</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 Marvel Hindi Movies Site. All rights reserved. Content is linked to official streaming platforms only.</p>
-</footer>
-
+  <footer>
+    © 2025 Marvel Hindi Movies. All rights reserved.
+  </footer>
 </body>
 </html>
